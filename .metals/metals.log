@@ -1,0 +1,275 @@
+2023.02.18 19:44:23 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/amirhossein/Desktop/my_React_Proj/first_app/.metals/lsp.trace.json or /Users/amirhossein/Library/Caches/org.scalameta.metals/lsp.trace.json
+2023.02.18 19:44:24 INFO  logging to file /Users/amirhossein/Desktop/my_React_Proj/first_app/.metals/metals.log
+2023.02.18 19:44:24 INFO  Started: Metals version 0.11.10 in workspace '/Users/amirhossein/Desktop/my_React_Proj/first_app' for client Visual Studio Code 1.74.3.
+Feb 18, 2023 7:44:26 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: coursierapi.error.SimpleResolutionError$1: Error downloading com.sourcegraph:semanticdb-javac:0.7.4
+  not found: /Users/amirhossein/.ivy2/local/com.sourcegraph/semanticdb-javac/0.7.4/ivys/ivy.xml
+  download error: Caught java.net.UnknownHostException (repo1.maven.org) while downloading https://repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/public/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/snapshots/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+java.util.concurrent.CompletionException: coursierapi.error.SimpleResolutionError$1: Error downloading com.sourcegraph:semanticdb-javac:0.7.4
+  not found: /Users/amirhossein/.ivy2/local/com.sourcegraph/semanticdb-javac/0.7.4/ivys/ivy.xml
+  download error: Caught java.net.UnknownHostException (repo1.maven.org) while downloading https://repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/public/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/snapshots/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at scala.concurrent.ExecutionContext$parasitic$.execute(ExecutionContext.scala:222)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:504)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: coursierapi.error.SimpleResolutionError$1: Error downloading com.sourcegraph:semanticdb-javac:0.7.4
+  not found: /Users/amirhossein/.ivy2/local/com.sourcegraph/semanticdb-javac/0.7.4/ivys/ivy.xml
+  download error: Caught java.net.UnknownHostException (repo1.maven.org) while downloading https://repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/public/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/snapshots/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+	at coursierapi.error.SimpleResolutionError.of(SimpleResolutionError.java:11)
+	at coursierapi.shaded.coursier.internal.api.ApiHelper$.simpleResError(ApiHelper.scala:338)
+	at coursierapi.shaded.coursier.internal.api.ApiHelper$.doFetch(ApiHelper.scala:382)
+	at coursierapi.shaded.coursier.internal.api.ApiHelper.doFetch(ApiHelper.scala)
+	at coursierapi.Fetch.fetchResult(Fetch.java:244)
+	at coursierapi.Fetch.fetch(Fetch.java:239)
+	at scala.meta.internal.metals.Embedded$.downloadDependency(Embedded.scala:260)
+	at scala.meta.internal.metals.Embedded$.downloadSemanticdbJavac(Embedded.scala:288)
+	at scala.meta.internal.metals.JavaInteractiveSemanticdb$.create(JavaInteractiveSemanticdb.scala:203)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$updateWorkspaceDirectory$9(MetalsLanguageServer.scala:413)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$updateWorkspaceDirectory$8(MetalsLanguageServer.scala:412)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.MetalsLanguageServer.updateWorkspaceDirectory(MetalsLanguageServer.scala:411)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$initialize$2(MetalsLanguageServer.scala:879)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:678)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+
+2023.02.18 19:44:29 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/amirhossein/Desktop/my_React_Proj/first_app/.metals/lsp.trace.json or /Users/amirhossein/Library/Caches/org.scalameta.metals/lsp.trace.json
+2023.02.18 19:44:30 INFO  logging to file /Users/amirhossein/Desktop/my_React_Proj/first_app/.metals/metals.log
+2023.02.18 19:44:30 INFO  Started: Metals version 0.11.10 in workspace '/Users/amirhossein/Desktop/my_React_Proj/first_app' for client Visual Studio Code 1.74.3.
+Feb 18, 2023 7:44:32 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: coursierapi.error.SimpleResolutionError$1: Error downloading com.sourcegraph:semanticdb-javac:0.7.4
+  not found: /Users/amirhossein/.ivy2/local/com.sourcegraph/semanticdb-javac/0.7.4/ivys/ivy.xml
+  download error: Caught java.net.UnknownHostException (repo1.maven.org) while downloading https://repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/public/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/snapshots/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+java.util.concurrent.CompletionException: coursierapi.error.SimpleResolutionError$1: Error downloading com.sourcegraph:semanticdb-javac:0.7.4
+  not found: /Users/amirhossein/.ivy2/local/com.sourcegraph/semanticdb-javac/0.7.4/ivys/ivy.xml
+  download error: Caught java.net.UnknownHostException (repo1.maven.org) while downloading https://repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/public/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/snapshots/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at scala.concurrent.ExecutionContext$parasitic$.execute(ExecutionContext.scala:222)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:504)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: coursierapi.error.SimpleResolutionError$1: Error downloading com.sourcegraph:semanticdb-javac:0.7.4
+  not found: /Users/amirhossein/.ivy2/local/com.sourcegraph/semanticdb-javac/0.7.4/ivys/ivy.xml
+  download error: Caught java.net.UnknownHostException (repo1.maven.org) while downloading https://repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/public/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/snapshots/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+	at coursierapi.error.SimpleResolutionError.of(SimpleResolutionError.java:11)
+	at coursierapi.shaded.coursier.internal.api.ApiHelper$.simpleResError(ApiHelper.scala:338)
+	at coursierapi.shaded.coursier.internal.api.ApiHelper$.doFetch(ApiHelper.scala:382)
+	at coursierapi.shaded.coursier.internal.api.ApiHelper.doFetch(ApiHelper.scala)
+	at coursierapi.Fetch.fetchResult(Fetch.java:244)
+	at coursierapi.Fetch.fetch(Fetch.java:239)
+	at scala.meta.internal.metals.Embedded$.downloadDependency(Embedded.scala:260)
+	at scala.meta.internal.metals.Embedded$.downloadSemanticdbJavac(Embedded.scala:288)
+	at scala.meta.internal.metals.JavaInteractiveSemanticdb$.create(JavaInteractiveSemanticdb.scala:203)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$updateWorkspaceDirectory$9(MetalsLanguageServer.scala:413)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$updateWorkspaceDirectory$8(MetalsLanguageServer.scala:412)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.MetalsLanguageServer.updateWorkspaceDirectory(MetalsLanguageServer.scala:411)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$initialize$2(MetalsLanguageServer.scala:879)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:678)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+
+2023.02.18 19:44:35 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/amirhossein/Desktop/my_React_Proj/first_app/.metals/lsp.trace.json or /Users/amirhossein/Library/Caches/org.scalameta.metals/lsp.trace.json
+2023.02.18 19:44:35 INFO  logging to file /Users/amirhossein/Desktop/my_React_Proj/first_app/.metals/metals.log
+2023.02.18 19:44:35 INFO  Started: Metals version 0.11.10 in workspace '/Users/amirhossein/Desktop/my_React_Proj/first_app' for client Visual Studio Code 1.74.3.
+Feb 18, 2023 7:44:36 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: coursierapi.error.SimpleResolutionError$1: Error downloading com.sourcegraph:semanticdb-javac:0.7.4
+  not found: /Users/amirhossein/.ivy2/local/com.sourcegraph/semanticdb-javac/0.7.4/ivys/ivy.xml
+  download error: Caught java.net.UnknownHostException (repo1.maven.org) while downloading https://repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/public/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/snapshots/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+java.util.concurrent.CompletionException: coursierapi.error.SimpleResolutionError$1: Error downloading com.sourcegraph:semanticdb-javac:0.7.4
+  not found: /Users/amirhossein/.ivy2/local/com.sourcegraph/semanticdb-javac/0.7.4/ivys/ivy.xml
+  download error: Caught java.net.UnknownHostException (repo1.maven.org) while downloading https://repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/public/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/snapshots/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at scala.concurrent.ExecutionContext$parasitic$.execute(ExecutionContext.scala:222)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:504)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: coursierapi.error.SimpleResolutionError$1: Error downloading com.sourcegraph:semanticdb-javac:0.7.4
+  not found: /Users/amirhossein/.ivy2/local/com.sourcegraph/semanticdb-javac/0.7.4/ivys/ivy.xml
+  download error: Caught java.net.UnknownHostException (repo1.maven.org) while downloading https://repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/public/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/snapshots/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+	at coursierapi.error.SimpleResolutionError.of(SimpleResolutionError.java:11)
+	at coursierapi.shaded.coursier.internal.api.ApiHelper$.simpleResError(ApiHelper.scala:338)
+	at coursierapi.shaded.coursier.internal.api.ApiHelper$.doFetch(ApiHelper.scala:382)
+	at coursierapi.shaded.coursier.internal.api.ApiHelper.doFetch(ApiHelper.scala)
+	at coursierapi.Fetch.fetchResult(Fetch.java:244)
+	at coursierapi.Fetch.fetch(Fetch.java:239)
+	at scala.meta.internal.metals.Embedded$.downloadDependency(Embedded.scala:260)
+	at scala.meta.internal.metals.Embedded$.downloadSemanticdbJavac(Embedded.scala:288)
+	at scala.meta.internal.metals.JavaInteractiveSemanticdb$.create(JavaInteractiveSemanticdb.scala:203)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$updateWorkspaceDirectory$9(MetalsLanguageServer.scala:413)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$updateWorkspaceDirectory$8(MetalsLanguageServer.scala:412)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.MetalsLanguageServer.updateWorkspaceDirectory(MetalsLanguageServer.scala:411)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$initialize$2(MetalsLanguageServer.scala:879)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:678)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+
+2023.02.18 19:44:39 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/amirhossein/Desktop/my_React_Proj/first_app/.metals/lsp.trace.json or /Users/amirhossein/Library/Caches/org.scalameta.metals/lsp.trace.json
+2023.02.18 19:44:40 INFO  logging to file /Users/amirhossein/Desktop/my_React_Proj/first_app/.metals/metals.log
+2023.02.18 19:44:40 INFO  Started: Metals version 0.11.10 in workspace '/Users/amirhossein/Desktop/my_React_Proj/first_app' for client Visual Studio Code 1.74.3.
+Feb 18, 2023 7:44:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: coursierapi.error.SimpleResolutionError$1: Error downloading com.sourcegraph:semanticdb-javac:0.7.4
+  not found: /Users/amirhossein/.ivy2/local/com.sourcegraph/semanticdb-javac/0.7.4/ivys/ivy.xml
+  download error: Caught java.net.UnknownHostException (repo1.maven.org) while downloading https://repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/public/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/snapshots/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+java.util.concurrent.CompletionException: coursierapi.error.SimpleResolutionError$1: Error downloading com.sourcegraph:semanticdb-javac:0.7.4
+  not found: /Users/amirhossein/.ivy2/local/com.sourcegraph/semanticdb-javac/0.7.4/ivys/ivy.xml
+  download error: Caught java.net.UnknownHostException (repo1.maven.org) while downloading https://repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/public/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/snapshots/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at scala.concurrent.ExecutionContext$parasitic$.execute(ExecutionContext.scala:222)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:504)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: coursierapi.error.SimpleResolutionError$1: Error downloading com.sourcegraph:semanticdb-javac:0.7.4
+  not found: /Users/amirhossein/.ivy2/local/com.sourcegraph/semanticdb-javac/0.7.4/ivys/ivy.xml
+  download error: Caught java.net.UnknownHostException (repo1.maven.org) while downloading https://repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/public/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/snapshots/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+	at coursierapi.error.SimpleResolutionError.of(SimpleResolutionError.java:11)
+	at coursierapi.shaded.coursier.internal.api.ApiHelper$.simpleResError(ApiHelper.scala:338)
+	at coursierapi.shaded.coursier.internal.api.ApiHelper$.doFetch(ApiHelper.scala:382)
+	at coursierapi.shaded.coursier.internal.api.ApiHelper.doFetch(ApiHelper.scala)
+	at coursierapi.Fetch.fetchResult(Fetch.java:244)
+	at coursierapi.Fetch.fetch(Fetch.java:239)
+	at scala.meta.internal.metals.Embedded$.downloadDependency(Embedded.scala:260)
+	at scala.meta.internal.metals.Embedded$.downloadSemanticdbJavac(Embedded.scala:288)
+	at scala.meta.internal.metals.JavaInteractiveSemanticdb$.create(JavaInteractiveSemanticdb.scala:203)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$updateWorkspaceDirectory$9(MetalsLanguageServer.scala:413)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$updateWorkspaceDirectory$8(MetalsLanguageServer.scala:412)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.MetalsLanguageServer.updateWorkspaceDirectory(MetalsLanguageServer.scala:411)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$initialize$2(MetalsLanguageServer.scala:879)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:678)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+
+2023.02.18 19:44:44 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/amirhossein/Desktop/my_React_Proj/first_app/.metals/lsp.trace.json or /Users/amirhossein/Library/Caches/org.scalameta.metals/lsp.trace.json
+2023.02.18 19:44:45 INFO  logging to file /Users/amirhossein/Desktop/my_React_Proj/first_app/.metals/metals.log
+2023.02.18 19:44:45 INFO  Started: Metals version 0.11.10 in workspace '/Users/amirhossein/Desktop/my_React_Proj/first_app' for client Visual Studio Code 1.74.3.
+Feb 18, 2023 7:44:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: coursierapi.error.SimpleResolutionError$1: Error downloading com.sourcegraph:semanticdb-javac:0.7.4
+  not found: /Users/amirhossein/.ivy2/local/com.sourcegraph/semanticdb-javac/0.7.4/ivys/ivy.xml
+  download error: Caught java.net.UnknownHostException (repo1.maven.org) while downloading https://repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/public/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/snapshots/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+java.util.concurrent.CompletionException: coursierapi.error.SimpleResolutionError$1: Error downloading com.sourcegraph:semanticdb-javac:0.7.4
+  not found: /Users/amirhossein/.ivy2/local/com.sourcegraph/semanticdb-javac/0.7.4/ivys/ivy.xml
+  download error: Caught java.net.UnknownHostException (repo1.maven.org) while downloading https://repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/public/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/snapshots/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at scala.concurrent.ExecutionContext$parasitic$.execute(ExecutionContext.scala:222)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:504)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: coursierapi.error.SimpleResolutionError$1: Error downloading com.sourcegraph:semanticdb-javac:0.7.4
+  not found: /Users/amirhossein/.ivy2/local/com.sourcegraph/semanticdb-javac/0.7.4/ivys/ivy.xml
+  download error: Caught java.net.UnknownHostException (repo1.maven.org) while downloading https://repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/public/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+  download error: Caught java.net.UnknownHostException (oss.sonatype.org) while downloading https://oss.sonatype.org/content/repositories/snapshots/com/sourcegraph/semanticdb-javac/0.7.4/semanticdb-javac-0.7.4.pom
+	at coursierapi.error.SimpleResolutionError.of(SimpleResolutionError.java:11)
+	at coursierapi.shaded.coursier.internal.api.ApiHelper$.simpleResError(ApiHelper.scala:338)
+	at coursierapi.shaded.coursier.internal.api.ApiHelper$.doFetch(ApiHelper.scala:382)
+	at coursierapi.shaded.coursier.internal.api.ApiHelper.doFetch(ApiHelper.scala)
+	at coursierapi.Fetch.fetchResult(Fetch.java:244)
+	at coursierapi.Fetch.fetch(Fetch.java:239)
+	at scala.meta.internal.metals.Embedded$.downloadDependency(Embedded.scala:260)
+	at scala.meta.internal.metals.Embedded$.downloadSemanticdbJavac(Embedded.scala:288)
+	at scala.meta.internal.metals.JavaInteractiveSemanticdb$.create(JavaInteractiveSemanticdb.scala:203)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$updateWorkspaceDirectory$9(MetalsLanguageServer.scala:413)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$updateWorkspaceDirectory$8(MetalsLanguageServer.scala:412)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.MetalsLanguageServer.updateWorkspaceDirectory(MetalsLanguageServer.scala:411)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$initialize$2(MetalsLanguageServer.scala:879)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:678)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+
